@@ -1,15 +1,73 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <header class="hero-unit" id="banner">
   <div class="container">
-  <div class="col-sm-12 col-md-10 pull-right" style="text-align: left">
+  <div class="col-sm-12 col-md-10 pull-right">
     <h1>About</h1>
     <p class="lead">Helping you adopt your next pet!</p>
   </div>
     <img class="col-md-2" src="assets/images/HumSocietyLogo.png" alt="I'm Yeoman">
-
-    
   </div>
 </header>
-<div class="col-md-12">
-This is the about view.
+<div class="container">
+  <h1>Who We Are</h1>
+  <p class="mission">The Mower County Humane Society is a 100% volunteer-operated animal shelter located in Austin, Minnesota
+  We have a shelter built at 101 22nd Street SE in Austin. This is a new location that might not yet appear on Google
+  maps or on GPS devices. However it's easy to get to our location by simply following Oakland Avenue to the east as far as you can go,
+  and you can't miss our shelter. Our shelter phone number is 507-437-9262. It is our goal to provide care and shelter
+  for homeless pets, adopt them into responsible homes, and promote responsible pet ownership, including spaying and neutering of
+  companion animals.</p>
 </div>
+
+<div class="row">
+  <div class="col-md-6" id="visit">
+  	<h1>Visit Us</h1>
+  	<h4><b>Mower County Humane Society</b></h4>
+  	<p><a href="https://www.google.com/maps/place/101+22nd+St+NW,+Austin,+MN+55912/@43.6668946,-93.0052371,17z/data=!4m2!3m1!1s0x87f0d15b1e5e3fb7:0x3d213f8c3d832bcc?hl=en">101 22nd Street SE <i class="fa fa-map-marker">&nbsp;</i></a><br>
+	Austin, MN 55912 <br>
+	Phone: 507-437-9262</p>  
+  </div>
+  <div class="col-md-6" id="contact">
+  	<h1>Contact Us</h1>
+  	<p><b>Phone:</b> 507-437-9262</br>
+  	<b>Email:</b><a href="mailto:chrissharp@charter.net" mce_href="mailto:chrissharp@charter.net">
+	chrissharp@charter.net</a></br>
+	<b>Our Hours</b> </br>
+	<b>Tuesdays:</b> 4:30 PM to 6:00 PM </br>
+  	<b>Sundays:</b> 2:00 PM to 4:00 PM</p>
+  </div>
+</div>
+
+<div class="well container">
+	<form class="form-horizontal" role="form" method="post">
+	    <div class="form-group">
+	        <label for="name" class="col-sm-2 control-label">Name</label>
+	        <div class="col-sm-8">
+	            <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="">
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <label for="email" class="col-sm-2 control-label">Email</label>
+	        <div class="col-sm-8">
+	            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <label for="email" class="col-sm-2 control-label">Subject</label>
+	        <div class="col-sm-8">
+	            <input type="email" class="form-control" id="email" name="email" placeholder="subject" value="">
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <label for="message" class="col-sm-2 control-label">Message</label>
+	        <div class="col-sm-8">
+	            <textarea class="form-control" rows="4" name="Message" placeholder="Message"></textarea>
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <div class="col-sm-8 col-sm-offset-2">
+	            <button type="button" class="btn btn-primary">Send</button>
+	        </div>
+	    </div>
+	</form>
+</div>
+

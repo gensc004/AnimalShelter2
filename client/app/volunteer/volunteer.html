@@ -1,7 +1,7 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <header class="hero-unit" id="banner">
   <div class="container">
-  <div class="col-sm-12 col-md-10 pull-right" style="text-align: left">
+  <div class="col-sm-12 col-md-10 pull-right">
     <h1>Volunteer oppurtunities</h1>
     <p class="lead">We Need More Volunteers!</p>
   </div>
@@ -10,9 +10,12 @@
   </div>
 </header>
 <div class="container">
+	<h4 style="line-height:24px">The entire Shelter is operated with a handful of volunteers, and we really do need more help. There is a great variety of tasks that need to be done, and we can use more help with just about all of them. Our greatest need is for responsible adults -- there is a limited amount of work that can be done by kids. If you have a love for animals, and don't mind being the object of unconditional love, there's bound to be something you can do. Here is a list of some of the things you might be interested in doing:</h4>
+	<div class="glyphicon glyphicon-option-vertical"></div>
 	<div class="row" style="margin: 10px 0 10px 0; background-color: #f5f5f5; border: 1px solid #e3e3e3">
+
 		<div class="column">
-			<div class="btn-group btn-group-lg btn-group-vertical col-xs-12 col-sm-6 col-md-4 pull-left" style="padding: 0" >
+			<div class="btn-group btn-group-lg btn-group-vertical col-xs-12 col-sm-6 col-md-5 pull-left" style="padding: 0" >
 				<button type="button" class="btn btn-primary" style="border-radius: 0px 0px 0px 0px !important" ng-repeat="section in sections" ng-click="switchSection(section)">{{section.name}}</button>
 			</div>
 		</div>
