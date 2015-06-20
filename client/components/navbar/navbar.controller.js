@@ -5,7 +5,20 @@ angular.module('animalShelter2App')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    },
+    {
+      'title': 'Volunteer',
+      'link': '/volunteer'
+    },
+    {
+      'title': 'Donate',
+      'link': '/donate'
+    },
+    {
+      'title': 'About',
+      'link': '/about'
+    },
+];
 
     $scope.isCollapsed = true;
 
