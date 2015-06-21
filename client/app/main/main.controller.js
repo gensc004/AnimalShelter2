@@ -8,4 +8,6 @@ angular.module('animalShelter2App')
       $scope.awesomeThings = awesomeThings;
     });
 
+    $scope.clicked = true;
+
   });
