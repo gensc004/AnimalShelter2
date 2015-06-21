@@ -28,3 +28,27 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+.main-carousel {
+    @media (max-width: 1200px) { 
+        margin-top: 40px
+    }
+    @media (max-width: 992px) { 
+        margin-top: 90px
+    }
+    @media (max-width: 768px) { 
+        margin-top: 0px;
+        margin-bottom: 10px
+    }
+}
+
+.main-title {
+    text-align: left;
+    @media (max-width: 768px) {text-align: center}
+}
+.titles {
+    h1 {
+        text-align: left
+    }
+    
+}

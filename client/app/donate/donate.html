@@ -2,19 +2,35 @@
 
 <header class="hero-unit" id="banner">
   <div class="container">
-  <div class="col-sm-12 col-md-10 pull-right">
-    <h1>Give me money</h1>
-    <p class="lead">Please!</p>
+  <div class="col-sm-12 col-md-10 pull-right titles">
+    <h1>Donate To Our Cause</h1>
+    <p class="lead">Help us help animals.</p>
   </div>
     <img class="col-md-2" src="assets/images/HumSocietyLogo.png" alt="I'm Yeoman">
   </div>
 </header>
 
 <div class="col-md-12">
-<div class="container">
-	<h1>Help Us Out</h1>
-	<p>The Mower County Humane Society is operated entirely with volunteers - your donation will be used to benefit ONLY the homeless animals in our care.</p>
-</div>
+
+<div class="container well">
+	<div class="col-sm-6 pull-left">
+		<h1>Help Us Out</h1>
+		<p>The MCHS is operated entirely with volunteers - your donation will be used to benefit ONLY the homeless animals in our care.</p>
+		<div class="hidden-xs" style="margin-top: 50px">
+            <carousel interval="myInterval">
+              <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                  <h4>Slide {{$index}}</h4>
+                  <p>{{slide.text}}</p>
+                </div>
+              </slide>
+            </carousel>
+        </div>
+	</div>
+	<div id='razoo_donation_widget'>
+		<span><a href="https://www.razoo.com/">Raise money online</a> for <a href="https://www.razoo.com/story/Mower-County-Humane-Society">MOWER COUNTY HUMANE SOCIETY</a></span>
+	</div>
 </div>
 <div class="container">
 	<div id='razoo_donation_widget'>
