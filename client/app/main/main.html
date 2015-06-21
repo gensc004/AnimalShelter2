@@ -2,7 +2,7 @@
 
 <header class="hero-unit" id="banner">
   <div class="container">
-  <div class="col-sm-12 col-md-10 pull-right" style="text-align: left">
+  <div class="col-sm-12 col-md-10 pull-right titles">
     <h1>Mower County Humane Society</h1>
     <p class="lead">Adopt your next pet!</p>
   </div>
@@ -14,33 +14,49 @@
 
 <div class="container">
   <div class="row">
-    <div class="well well-lg col-lg-12" style="border-radius: 0 0 5px 5px">
-      <h2>Adopting a friend</h2>
-
-      <p>We have wonderful animals available for adoption. We do lightly screen adoption applicants to make sure there is a good fit for both the animal and the applicant. This screening can take a few days to accomplish, and we do not release an animal prior to this screening. If you're interested in any of the animals you see on this website, please send us an e-mail, call us at 507-437-9262 (leave a message & we'll call you back) or stop by during our shelter's open hours, which are Tuesdays from 4:30PM to 6PM and Sundays from 2PM to 4PM. Times/days other than these can be arranged in advance by appointment.</p>
-
-      <div class="row">
-        <a type="button" class="btn btn-primary col-xs-2 pull-right" style="border-radius: 0 3px 3px 0" href="https://www.petfinder.com/pet-search?shelter_id=MN78&animal=dog">Find a dog</a>
-        <a type="button" class="btn btn-primary col-xs-2 pull-right" style="border-radius: 0 0 0 0" href="https://www.petfinder.com/pet-search?shelter_id=MN78&animal=cat">Find a cat</a>
-        <button type="button" class="btn btn-default pull-right" style="border-radius: 3px 0 0 3px" ng-click="clicked = !clicked">See adoption policy</button>
-      </div>
-
-      <div ng-hide="clicked" style="margin-top: 10px">
-      <p>You can receive our Adoption Application/Contract in Microsoft Word format! The Form is a simple, short, one-sided application that has about 15 questions. Just click on the appropriate link to send a request via e-mail, and we can e-mail you the Application!! 
-      <br>
-        <br>
-        Email: <a>Send an e-mail regarding DOGS</a> 
-        <br>
-
-        Email: <a>Send an e-mail regarding CATS</a>
-        <br>
-        <br>
-
-        VERY IMPORTANT - Be sure to complete the form in its entirety - don't leave any questions blank. 
-        We assess animals and their prospective homes for compatibility, based on the information you provide, as well as the information we know about the dog or cat for which you are applying. We do this to ensure a good fit between the animal and the applicant. We strive to share as much information about the animals as possible, so as to minimize any unexpected situations. Please don't be offended by our very basic questions or inquiries as we are only trying to find out relevant information about the animal's potential home. We like to know about your history of pet ownership, household make-up (other pets, children, etc.), whether you own or rent and the like.
-
-        Applications are submitted via e-mail, regular mail, and also in-person at the Shelter. Therefore, even though an animal may still be listed on the website, there may in fact already be an application that has been submitted for that particular animal. We try to keep the site as current as possible with all information that we have available. Once a dog application is submitted, the review can sometimes take up to a week to accomplish, due to the fact that we are all volunteers and all of this work is done in our spare time. We do not adopt dogs out without an application form being completed at least a few days in advance by the prospective home.</p>
+    <div class="well well-lg col-xs-12" style="border-radius: 0 0 5px 5px">
+      <div class="col-sm-6 pull-right main-carousel" style="">
+            <carousel interval="myInterval">
+              <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                  <h4>Slide {{$index}}</h4>
+                  <p>{{slide.text}}</p>
+                </div>
+              </slide>
+            </carousel>
         </div>
+      <div class="col-sm-6">
+        <h2 class="main-title" style="">Adopting a friend</h2>
+
+        <p style="  text-align: justify;">We have wonderful animals available for adoption. We do lightly screen adoption applicants to make sure there is a good fit for both the animal and the applicant. This screening can take a few days to accomplish, and we do not release an animal prior to this screening. If you're interested in any of the animals you see on this website, please send us an e-mail, call us at 507-437-9262 (leave a message & we'll call you back) or stop by during our shelter's open hours, which are Tuesdays from 4:30PM to 6PM and Sundays from 2PM to 4PM. Times/days other than these can be arranged in advance by appointment.</p>
+
+        <div class="row">
+          <a type="button" class="btn btn-primary col-xs-4 pull-right" style="border-radius: 0 3px 3px 0" href="https://www.petfinder.com/pet-search?shelter_id=MN78&animal=dog">Find a dog</a>
+          <a type="button" class="btn btn-primary col-xs-4 pull-right" style="border-radius: 0 0 0 0" href="https://www.petfinder.com/pet-search?shelter_id=MN78&animal=cat">Find a cat</a>
+          <button type="button" class="btn btn-default col-xs-4 pull-right" style="border-radius: 3px 0 0 3px" ng-click="clicked = !clicked">See adoption policy</button>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div ng-hide="clicked" style="margin-top: 10px">
+          <p>You can receive our Adoption Application/Contract in Microsoft Word format! The Form is a simple, short, one-sided application that has about 15 questions. Just click on the appropriate link to send a request via e-mail, and we can e-mail you the Application!! 
+          <br>
+            <br>
+            Email: <a>Send an e-mail regarding DOGS</a> 
+            <br>
+
+            Email: <a>Send an e-mail regarding CATS</a>
+            <br>
+            <br>
+
+            VERY IMPORTANT - Be sure to complete the form in its entirety - don't leave any questions blank. 
+            We assess animals and their prospective homes for compatibility, based on the information you provide, as well as the information we know about the dog or cat for which you are applying. We do this to ensure a good fit between the animal and the applicant. We strive to share as much information about the animals as possible, so as to minimize any unexpected situations. Please don't be offended by our very basic questions or inquiries as we are only trying to find out relevant information about the animal's potential home. We like to know about your history of pet ownership, household make-up (other pets, children, etc.), whether you own or rent and the like.
+
+            Applications are submitted via e-mail, regular mail, and also in-person at the Shelter. Therefore, even though an animal may still be listed on the website, there may in fact already be an application that has been submitted for that particular animal. We try to keep the site as current as possible with all information that we have available. Once a dog application is submitted, the review can sometimes take up to a week to accomplish, due to the fact that we are all volunteers and all of this work is done in our spare time. We do not adopt dogs out without an application form being completed at least a few days in advance by the prospective home.</p>
+          </div>
+        </div>
+      </div>
+        
 
     </div>
   </div>
