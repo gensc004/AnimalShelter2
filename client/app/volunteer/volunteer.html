@@ -1,17 +1,21 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <header class="hero-unit" id="banner">
   <div class="container">
-  <div class="col-sm-12 col-md-10 pull-right">
-    <h1>Volunteer oppurtunities</h1>
-    <p class="lead">We Need More Volunteers!</p>
+  <div class="col-sm-12 col-md-10 pull-right titles">
+    <h1>Volunteer Oppurtunities</h1>
+    <p class="lead">We need more volunteers!</p>
   </div>
     <img class="col-md-2" src="assets/images/HumSocietyLogo.png" alt="Humane Society Logo">
   </div>
 </header>
-<div class="container">
-	<h4 style="line-height:24px">The entire Shelter is operated with a handful of volunteers, and we really do need more help. There is a great variety of tasks that need to be done, and we can use more help with just about all of them. Our greatest need is for responsible adults -- there is a limited amount of work that can be done by kids. If you have a love for animals, and don't mind being the object of unconditional love, there's bound to be something you can do. Here is a list of some of the things you might be interested in doing:</h4>
+<div class="container">	
+	<div class="row">
+	  <div class="well well-lg col-lg-12" style="border-radius: 0 0 5px 5px; margin-bottom: 0px">
+	     <h4 style="line-height:24px">The entire Shelter is operated with a handful of volunteers, and we really do need more help. There is a great variety of tasks that need to be done, and we can use more help with just about all of them. Our greatest need is for responsible adults -- there is a limited amount of work that can be done by kids. If you have a love for animals, and don't mind being the object of unconditional love, there's bound to be something you can do. Here is a list of some of the things you might be interested in doing:</h4>
+	  </div>
+	</div>
 	<div class="glyphicon glyphicon-option-vertical"></div>
-	<div class="row" style="margin: 10px 0 10px 0; background-color: #f5f5f5; border: 1px solid #e3e3e3">
+	<div class="row" style="margin: 0px 0 10px 0; background-color: #f5f5f5; border: 1px solid #e3e3e3">
 		<div class="column">
 			<div class="btn-group btn-group-lg btn-group-vertical col-xs-12 col-sm-6 col-md-5 pull-left" style="padding: 0" >
 				<button type="button" class="btn btn-primary" style="border-radius: 0px 0px 0px 0px !important" ng-repeat="section in sections" ng-click="switchSection(section)">{{section.name}}</button>
@@ -20,8 +24,44 @@
 		<div class="column" style="">
 			<div class="col-xs-12 col-sm-6" style="border-radius: 0px 0px 0px 0px; padding: 24px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)">
 				<h4>{{currentSection.name}}</h4>
-				<p style="font-size: 16px; line-height: 24px">{{currentSection.info}}</p>
+				<p style="font-size: 16px; line-height: 22px; text-align: justify">{{currentSection.info}}</p>
+				<button type="button" class="btn btn-primary" style="position: absolute; right: 20px; bottom: 1px" ng-click="openForm = !openForm">Contact us</button>
 			</div>
+		</div>
+	</div>
+	<div class="row" ng-hide="openForm">
+		<div class="well">
+			<form class="form-horizontal" role="form" method="post">
+			    <div class="form-group">
+			        <label for="name" class="col-sm-2 control-label">Name</label>
+			        <div class="col-sm-8">
+			            <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="">
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label for="email" class="col-sm-2 control-label">Email</label>
+			        <div class="col-sm-8">
+			            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label for="email" class="col-sm-2 control-label">Subject</label>
+			        <div class="col-sm-8">
+			            <input type="email" class="form-control" id="email" name="email" placeholder="subject" value="{{currentSection.name}} Volunteering">
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label for="message" class="col-sm-2 control-label">Message</label>
+			        <div class="col-sm-8">
+			            <textarea class="form-control" rows="4" name="Message" placeholder="Message"></textarea>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <div class="col-sm-5 pull-right">
+			            <button type="button" class="btn btn-primary">Send</button>
+			        </div>
+			    </div>
+			</form>
 		</div>
 	</div>
 
