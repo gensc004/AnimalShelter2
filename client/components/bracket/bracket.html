@@ -1,0 +1,9 @@
+
+
+<script type="text/ng-template" id="field_renderer.html">
+    {{data}} blah
+        <li ng-repeat="field in data.children" ng-include="'field_renderer.html'"></li>
+</script>
+<ul class="navbar navbar-default navbar-static-top" ng-controller="BracketCtrl">
+  <li ng-repeat="field in menu" ng-include="'field_renderer.html'"></li>
+</ul>
