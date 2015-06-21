@@ -9,12 +9,18 @@
       </button>
       <a href="/" class="navbar-brand">Humane Society</a>
     </div>
+    
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
         <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
             <a ng-href="{{item.link}}">{{item.title}}</a>
         </li>
       </ul>
+      <div class="nav navbar-nav navbar-right">
+        <div class="facebook">
+          <a href="https://www.facebook.com/pages/Mower-County-Humane-Society/109122815795844" title="Humane Society on Facebook" popover="Facebook" popover-placement="bottom" popover-trigger="mouseenter"><i class="fa fa-facebook"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
